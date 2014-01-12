@@ -1,0 +1,44 @@
+h1 {
+	color: black;
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 7%;
+}
+
+fieldset {
+	width: 70%;
+	height: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.searchlabel {
+    float: left;
+    text-align: right;
+    width: 35%;
+    height: 25%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+
+#search {
+	width: 35%;
+    height: 25%;
+}
+
+.search {
+	height: 25%;
+}
+
+.buttons {
+	height: 20%;
+	margin-top: 3%;
+	margin-left: 37%;
+}
+
+.icon {
+	width: 88px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
