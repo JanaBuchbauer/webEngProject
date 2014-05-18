@@ -7,7 +7,7 @@ Ext.define('ExamApp.model.Video', {
         ],
 		
 		proxy: {
-			type: 'rest',
+			type: 'jsonp',
 			url: '', 
             
 			reader: {
