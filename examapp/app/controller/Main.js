@@ -1,3 +1,5 @@
+var urlString = "";
+
 Ext.define('ExamApp.controller.Main', {
 	extend: 'Ext.app.Controller',
 	
@@ -33,7 +35,8 @@ Ext.define('ExamApp.controller.Main', {
 	
 	onCarouselChange: function(carousel, newVal, oldVal) {
 		if(newVal.getItemId() == "listview") {
-			Ext.getCmp('videopanel').setHtml('')
+			Ext.getCmp('videopanel').setHtml('');
+			Ext.getCmp('videopanel').setHtml(urlString);
 			this.getBtnBack().hide();
 			this.getVideoView().disable();
 			Ext.ComponentQuery.query('titlebar')[0].setTitle('TOP Tracks');
@@ -43,7 +46,8 @@ Ext.define('ExamApp.controller.Main', {
 	},
 	
 	onBackBtnTap: function() {
-		Ext.getCmp('videopanel').setHtml('')
+		Ext.getCmp('videopanel').setHtml('');
+		Ext.getCmp('videopanel').setHtml(urlString);
 		this.getMainView().setActiveItem(0);
 	},
 	
@@ -76,9 +80,11 @@ Ext.define('ExamApp.controller.Main', {
 					var ytLink = "http://www.youtube.com/embed/" + ytVideoID;
 					var newHtml = "<iframe width='560' height='315' src='" + ytLink + "' frameborder='0' allowfullscreen></iframe>";
 					Ext.getCmp('videopanel').setHtml(newHtml);
+					urlString = newHtml;
 				} else {
 					Ext.Msg.alert('Error', 'Something went wrong!', Ext.emptyFn);
 					console.log("error");
+					urlString = "";
 				}
 			},
 			
